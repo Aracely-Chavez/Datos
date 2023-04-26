@@ -1,0 +1,933 @@
+
+<br />
+<b>Warning</b>:  include_once(../../../../include/_functionTest.php): Failed to open stream: No such file or directory in <b>/var/www/html/mapas/mapa-estaciones-2/export.php</b> on line <b>32</b><br />
+<br />
+<b>Warning</b>:  include_once(): Failed opening '../../../../include/_functionTest.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php:/usr/share/pear:/usr/share/php') in <b>/var/www/html/mapas/mapa-estaciones-2/export.php</b> on line <b>32</b><br />
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenidos - SENAMHI</title>
+
+    <style type="text/css">
+        .body01 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            text-align: left;
+            font-weight: bold;
+            color: #072C54
+        }
+
+        #container {
+            width: 100%;
+            text-align: center;
+        }
+
+        #izquierda {
+            float: left;
+            width: auto;
+            height: 20px;
+            text-align: left;
+        }
+
+        #derecha {
+            float: right;
+            width: auto;
+            height: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="body01" id="container">
+    <div id="izquierda">
+        Fuente: SENAMHI / DRD<br>
+        * Datos sin control de calidad.<br>
+        * El uso de estos datos ser&aacute; de entera responsabilidad del usuario.<br>
+    </div>
+
+    <div id="derecha">
+        Leyenda: <br>
+        * S/D = Sin Datos.<br>
+        * T = Trazas (Precipitaci&oacute;n < 0.1 mm/d&iacute;a).<br>    </div>
+
+
+</div>
+<br>
+<br>
+<div>
+    <table width="750" border="0" class="body01" bordercolor="#999999" cellpadding="1" cellspacing="1"
+           align="center">
+        <tr aling=center bgcolor=#003366>
+            <td colspan="6" bgcolor=#666666>
+                <div align=center>
+                    <b>
+                        <font color=#F4F4F4>Estaci&oacute;n
+                            : SALCCA                        </font>
+                    </b>
+                </div>
+            </td>
+        </tr>
+        <tr aling=center>
+            <td>
+                <div align="right">Departamento&nbsp;:&nbsp;</div>
+            </td>
+            <td>CUSCO</td>
+            <td>
+                <div align="right">Provincia&nbsp;:&nbsp;</div>
+            </td>
+            <td>CANCHIS</td>
+            <td>
+                <div align="right">Distrito&nbsp;:&nbsp;</div>
+            </td>
+            <td>SAN PABLO</td>
+
+        </tr>
+        <tr aling=center>
+            <td>
+                <div align="right">Latitud&nbsp;:&nbsp;</div>
+            </td>
+            <td>14°10'11.89''</td>
+            <td>
+                <div align="right">Longitud&nbsp;:&nbsp;</div>
+            </td>
+            <td>71°13'54.73''</td>
+            <td>
+                <div align="right">Altitud&nbsp;:&nbsp;</div>
+            </td>
+            <td>3913 msnm.</td>
+
+        </tr>
+        <tr aling=center>
+            <td>
+                <div align="right">Tipo&nbsp;:&nbsp;</div>
+            </td>
+            <td>PE - Meteorológica</td>
+
+            <td>
+                <div align="right">C&oacute;digo&nbsp;:&nbsp;</div>
+            </td>
+            <td>114131</td>
+        </tr>
+    </table>
+</div>
+
+<table width="100%" border="1" class="body01" bordercolor="#999999" cellpadding="0" cellspacing="1" align="center"
+       id="dataTable">
+                    <tr aling=center bgcolor=#003366>
+                    <td rowspan="2" bgcolor=#666666>
+                        <div align=center>
+                            <b>
+                                <font color=#F4F4F4>A&Ntilde;O / MES / D&Iacute;A</font>
+                            </b>
+                        </div>
+                    </td>
+                    <!---->
+                    <td colspan="2" bgcolor=#A0A0A0>
+                        <div align=center>
+                            <b>
+                                <font color=#F4F4F4>TEMPERATURA (&deg;C)</font>
+                            </b>
+                        </div>
+                    </td>
+
+                    <td rowspan="2" bgcolor="#A0A0A0">
+                        <div align="center">
+                            <b>
+                                <font color="#F4F4F4">HUMEDAD RELATIVA (%)</font>
+                            </b>
+                        </div>
+                    </td>
+                    <td colspan="1" bgcolor=#A0A0A0>
+                        <div align=center>
+                            <b>
+                                <font color=#F4F4F4>PRECIPITACI&Oacute;N (mm/d&iacute;a)</font>
+                            </b>
+                        </div>
+                    </td>
+
+                </tr>
+                <!---->
+                <tr aling=center bgcolor=#003366>
+                    <td bgcolor=#A0A0A0>
+                        <div align=center>
+                            <b>
+                                <font color=#F4F4F4>MAX</font>
+                            </b>
+                        </div>
+                    </td>
+                    <td bgcolor=#A0A0A0>
+                        <div align=center>
+                            <b>
+                                <font color=#F4F4F4>MIN</font>
+                            </b>
+                        </div>
+                    </td>
+
+                    <td bgcolor=#A0A0A0>
+                        <div align=center>
+                            <b>
+                                <font color=#F4F4F4>TOTAL</font>
+                            </b>
+                        </div>
+                    </td>
+
+                </tr>
+                
+
+    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-01</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>14.4</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                50.4                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-02</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>13.8</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4.6</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                60.4                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-03</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>13.8</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4.8</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                61.7                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-04</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>14</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                67.4                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-05</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>14.6</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>1.8</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                63.6                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-06</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>12.8</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>2.8</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                71.2                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-07</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>14.2</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-2.4</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                67.1                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-08</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>16.6</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-3.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                63.7                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-09</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>17.8</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-2.4</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                57.6                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-10</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>17.4</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>.8</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                60.0                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-11</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>17</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                62.5                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-12</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>17.2</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                57.6                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-13</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>17</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-5</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                62.6                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-14</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>15.8</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-2.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                61.4                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-15</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>15.4</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-3.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                62.1                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-16</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>16.2</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>1.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                58.7                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-17</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>18</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                57.0                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-18</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>18.6</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4.6</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                51.9                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-19</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>17.4</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                52.7                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-20</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>17</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-6.4</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                53.8                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-21</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>17.8</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-4.6</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                55.4                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-22</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>16.2</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-7</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                53.6                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-23</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>15.8</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-3.4</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                53.4                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-24</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>15.4</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-5.8</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                50.7                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-25</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>16.4</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-8.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                46.0                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-26</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>16</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-7.4</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                53.1                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-27</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>16.6</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-7</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                52.5                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-28</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>15.4</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-7.2</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                54.7                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-29</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>16</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-8</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                51.4                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+                    <tr aling=center>
+                        <!-- Fecha -->
+                        <td>
+                            <div align=center>2020-06-30</div>
+                        </td>
+                        <!-- Temperatura Max -->
+                        <td>
+                            <div align=center>16.4</div>
+                        </td>
+                        <!-- Temperatura Min -->
+                        <td>
+                            <div align=center>-8.6</div>
+                        </td>
+                        <!-- Humedad Relativa -->
+                        <td>
+                            <div align="center">
+                                46.2                            </div>
+                        </td>
+                        <!-- Precipitacion Total -->
+                        <td>
+                            <div align=center>0.0</div>
+                        </td>
+                        <!-- Direccion del Viento 07 -->
+                    </tr>
+                    
+</table>
+
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+</body>
+</html>
